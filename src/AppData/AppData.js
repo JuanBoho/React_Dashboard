@@ -4,38 +4,42 @@ const AppData = {
     srcLogo: 'fas fa-mortar-pestle',
     PanelOptions: [
         {
+            id: 0,
             option: 'Home',
             iclass: 'fas fa-home'
         },
         {
+            id: 1,
             option: 'Informes',
             iclass: 'far fa-chart-bar'
         },
-        {
+        {   
+            id: 2,
             option: 'Pedidos',
             iclass: 'fas fa-shipping-fast'
         },
         {
+            id: 3,
             option: 'Horarios',
             iclass: 'far fa-clock'
         },
         {
+            id: 4,
             option: 'Productos',
             iclass: 'fas fa-clipboard-list'
         }
     ],
     SecOptions: [
-        {
+        {   
+            id: 1,
             option: 'Preguntas Frecuentes',
-            iclass: 'https://imgur.com/iOeUBV7.png'
+            iclass: 'far fa-question-circle'
         },
         {
+            id: 2,
             option: 'Centro de Ayuda',
-            iclass: 'https://imgur.com/PTgQlim.png'
+            iclass: 'fas fa-headset'
         },
-    ],
-    featureList: [
-        "Time", "Heart Rate"
     ]
 }
 

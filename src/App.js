@@ -1,29 +1,34 @@
 import React, {Component} from 'react';
 import logo from './logo.svg';
 import './App.css';
+import AppData from './AppData/AppData'
 import Panel  from './Panel';
 
 class App extends Component{
   
-  /*state = {
-    productData: ProductData,
-    currentPreviewImagePos: 0,
-    currentSelectedFeature: false
+  state = {
+    AppData: AppData,
+    currentSelectedOption: 0,
+    activeOptionSection: true, //Control opciones Select opc primarias 
+    currentSelectedSecOption: 0,
+    
   }
 
-  onColorOptionClick = (pos) =>{
-    this.setState({currentPreviewImagePos: pos});
+  onOptionClick = (pos) =>{
+    this.setState({currentSelectedOption : pos});
+    this.setState({activeOptionSection : true});
   }
 
-  onFeatureOptionClick = (pos) =>{
-    this.setState({currentSelectedFeature : pos});
-  }*/
+  onSecOptionClick = (pos) =>{
+    this.setState({currentSelectedSecOption : pos});
+    this.setState({activeOptionSection : false});
+  }
 
   render(){
     return (
       <div className="App">
         
-        <Panel/>
+        <Panel  data={this.state.AppData} onOptionClick = {this.onOptionClick} currentSelectedOption = {this.state.currentSelectedOption} activeOptionSection = {this.state.activeOptionSection} onSecOptionClick = {this.onSecOptionClick} currentSelectedSecOption = {this.state.currentSelectedSecOption}/>
         
         <div className="Dash-display">
           <img src={logo} className="App-logo" alt="logo" />

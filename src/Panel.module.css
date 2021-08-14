@@ -1,0 +1,83 @@
+.panelContainer{
+    background-color: teal;
+    color:aliceblue;
+    padding: 10px;
+}
+
+.Hr{
+    margin: 0 20px 10px 10px;
+    border: 1px solid rgba(246, 252, 252, 0.137);
+}
+.Logo{
+    display: none;
+    margin-top: 20px;
+    font-size: 40px;
+}
+
+.Logo > p{
+    margin: 0;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+@media (min-width: 768px){
+    .Logo{
+        display: block;
+    }
+}
+
+.PanelNav{
+    margin-top: 40px;
+    margin-bottom: 40px;
+    padding: 40px auto;
+}
+
+/*--------------Links Principales----------------*/
+
+.PanelLinks{
+    display: flex;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.PanelLinks:hover{
+    background-color: rgba(246, 252, 252, 0.137);
+    border-radius: 8px;
+}
+
+.PanelLinks > i{
+    /*margin-top: 18px;
+    padding: 0 10px;*/
+    font-size: 16px;
+    box-sizing: content-box;
+    padding: 18px 0 0 10px;
+    max-width: 16px;
+}
+
+.PanelLinks > p{
+    margin-left: 16px;
+}
+
+/*-----------Links Secundarios------------*/
+.PanelSecLinks{
+    display: flex;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.PanelSecLinks:hover{
+    color: rgba(246, 252, 252, 0.253);;
+}
+
+.PanelSecLinks > i{
+    margin-top: 18px;
+    padding: 0 10px;
+}
+
+.copy{
+    margin-top: 36px;
+    margin-bottom: 0px;
+    padding: 0;
+    font-size: 12px;
+    color: rgba(246, 252, 252, 0.253);
+}

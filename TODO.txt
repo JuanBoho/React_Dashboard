@@ -1,0 +1,7 @@
+Dashboard Template #TODO:
+
+1. Panel:
+	- warnings sobre uso de 'class' para iconos, guardar Strings y toda la data
+	  en array tipo Product Data
+	- resolver posición del copy
+	- Agregar opciones al panel dinámicamente con js (código comentado)

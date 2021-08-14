@@ -1,25 +1,38 @@
+import React, {Component} from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Panel  from './Panel';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component{
+  
+  /*state = {
+    productData: ProductData,
+    currentPreviewImagePos: 0,
+    currentSelectedFeature: false
+  }
+
+  onColorOptionClick = (pos) =>{
+    this.setState({currentPreviewImagePos: pos});
+  }
+
+  onFeatureOptionClick = (pos) =>{
+    this.setState({currentSelectedFeature : pos});
+  }*/
+
+  render(){
+    return (
+      <div className="App">
+        
+        <Panel/>
+        
+        <div className="Dash-display">
+          <img src={logo} className="App-logo" alt="logo" />
+          <p>Cambio de sección</p>
+        </div>
+      
+      </div>
+    );
+  }
 }
 
 export default App;

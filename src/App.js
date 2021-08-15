@@ -9,30 +9,26 @@ class App extends Component{
   state = {
     AppData: AppData,
     currentSelectedOption: 0,
-    activeOptionSection: true, //Control opciones Select opc primarias 
-    currentSelectedSecOption: 0,
-    
+    currentDisplayPos: 0
   }
 
   onOptionClick = (pos) =>{
     this.setState({currentSelectedOption : pos});
-    this.setState({activeOptionSection : true});
-  }
-
-  onSecOptionClick = (pos) =>{
-    this.setState({currentSelectedSecOption : pos});
-    this.setState({activeOptionSection : false});
+    this.setState({currentDisplayPos: pos});
   }
 
   render(){
     return (
       <div className="App">
         
-        <Panel  data={this.state.AppData} onOptionClick = {this.onOptionClick} currentSelectedOption = {this.state.currentSelectedOption} activeOptionSection = {this.state.activeOptionSection} onSecOptionClick = {this.onSecOptionClick} currentSelectedSecOption = {this.state.currentSelectedSecOption}/>
+        <Panel  data={this.state.AppData} 
+          onOptionClick = {this.onOptionClick} 
+          currentSelectedOption = {this.state.currentSelectedOption}/>
         
         <div className="Dash-display">
           <img src={logo} className="App-logo" alt="logo" />
-          <p>Cambio de sección</p>
+          <p>{this.state.AppData.PanelOptions[this.state.currentDisplayPos].display}</p>
+
         </div>
       
       </div>

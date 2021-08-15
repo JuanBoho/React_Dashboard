@@ -6,39 +6,51 @@ const AppData = {
         {
             id: 0,
             option: 'Home',
-            iclass: 'fas fa-home'
+            optionType: 'main',
+            iclass: 'fas fa-home',
+            display: 'Home.js'
         },
         {
             id: 1,
             option: 'Informes',
-            iclass: 'far fa-chart-bar'
+            optionType: 'main',
+            iclass: 'far fa-chart-bar',
+            display: 'Informes.js'
         },
         {   
             id: 2,
             option: 'Pedidos',
-            iclass: 'fas fa-shipping-fast'
+            optionType: 'main',
+            iclass: 'fas fa-shipping-fast',
+            display: 'Pedidos.js'
         },
         {
             id: 3,
             option: 'Horarios',
-            iclass: 'far fa-clock'
+            optionType: 'main',
+            iclass: 'far fa-clock',
+            display: 'Horarios.js'
         },
         {
             id: 4,
             option: 'Productos',
-            iclass: 'fas fa-clipboard-list'
-        }
-    ],
-    SecOptions: [
+            optionType: 'main',
+            iclass: 'fas fa-clipboard-list',
+            display: 'Productos.js'
+        },
         {   
-            id: 1,
+            id: 5,
             option: 'Preguntas Frecuentes',
-            iclass: 'far fa-question-circle'
+            optionType: 'sec',
+            iclass: 'far fa-question-circle',
+            display: 'PregFrec.js'
         },
         {
-            id: 2,
+            id: 6,
             option: 'Centro de Ayuda',
-            iclass: 'fas fa-headset'
+            optionType: 'sec',
+            iclass: 'fas fa-headset',
+            display: 'CentroAyuda.js'
         },
     ]
 }

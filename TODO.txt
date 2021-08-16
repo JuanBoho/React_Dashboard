@@ -3,5 +3,9 @@ Dashboard Template #TODO:
 1. Panel:
 	- warnings sobre uso de 'class' para iconos, guardar Strings y toda la data
 	  en array tipo Product Data
-	- resolver posición del copy
-	- Agregar opciones al panel dinámicamente con js (código comentado)
+	- resolver posición cc del copy
+	-Hamburguer menu responsive
+2. Contenidos:
+
+	- Home: tres cartas con info relevante + dos graficas + bienvenido o lo que sea
+3. Panel de Usuario?

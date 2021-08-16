@@ -1,0 +1,74 @@
+.Container{
+    background-color:#fff;
+}
+
+.HourBanner{
+    margin: 0;
+    padding-right: 30px;
+    text-align: right;
+    font-size: 36px;
+    font-weight: 300;
+    color: darkgray;
+    
+}
+.cardsContainer{
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    justify-content: center;
+}
+
+@media  (max-width: 768px){
+    .cardsContainer{
+        display: block;
+    }
+}
+.card{
+    margin: 20px;
+    padding: 10px;
+    background-color: #14213D;
+    box-shadow: white 2px 2px;
+    border-radius: 8px;
+    color: darkslategray;
+}
+
+.card >h4{
+    text-align: left;
+    margin: 0;
+    font-size: 22px;
+    font-weight: 300;
+    
+}
+.card >p{
+    text-align: right;
+    margin: 4px;
+    font-size: 24px;
+}
+
+.card >hr{
+    border: 1px solid #fdb84986;
+}
+
+.graphContainer{
+    display: grid;
+    grid-template-columns: 60% 36%;
+    column-gap: 40px;
+    margin: 20px;
+    
+
+}
+.Homegraph{
+    background-color: #14213D;
+    border-radius: 8px;
+    margin-top: 20px ;
+}
+
+.Homegraph > h4{
+    
+    text-align: right;
+    color: #FDB849;
+    padding-right: 30px;
+}
+
+.graphProductos{
+    color: red;
+}

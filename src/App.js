@@ -2,9 +2,13 @@ import React, {Component} from 'react';
 import logo from './logo.svg';
 import './App.css';
 import AppData from './AppData/AppData'
-import Panel  from './Panel';
+import Panel from './Panel';
+import ContentDisplay from './Content/ContentDisplay';
+
+
 
 class App extends Component{
+  
   
   state = {
     AppData: AppData,
@@ -26,8 +30,7 @@ class App extends Component{
           currentSelectedOption = {this.state.currentSelectedOption}/>
         
         <div className="Dash-display">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>{this.state.AppData.PanelOptions[this.state.currentDisplayPos].display}</p>
+          <ContentDisplay currentDisplayPos = {this.state.currentDisplayPos}/>
 
         </div>
       

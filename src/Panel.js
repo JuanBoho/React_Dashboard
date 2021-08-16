@@ -28,7 +28,7 @@ const Panel = (props)=>{
     const PanelSecOptions = props.data.PanelOptions.map((item,pos) =>{
   
         const classArrSec = [classes.PanelSecLinks];
-        if (item.optionType === 's  ec'){    
+        if (item.optionType === 'sec'){    
             if (pos === props.currentSelectedOption){
                 classArrSec.push(classes.PanelSecLinkSelected);
             }
@@ -63,7 +63,11 @@ const Panel = (props)=>{
         {PanelOptions[1]}
         
         
-        <p className={classes.copy}><a href="https://github.com/JuanBoho" target="_blank">by JuanBoho, 2021</a> </p>
+        <a className={classes.copy} href="https://github.com/JuanBoho" target="_blank">
+            
+            <i className="fab fa-creative-commons"></i>
+            <p >by JuanBoho, 2021</p>
+        </a> 
 
     </div>
     );

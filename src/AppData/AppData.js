@@ -8,49 +8,49 @@ const AppData = {
             option: 'Home',
             optionType: 'main',
             iclass: 'fas fa-home',
-            display: 'Home.js'
+            display: 'Home'
         },
         {
             id: 1,
             option: 'Informes',
             optionType: 'main',
             iclass: 'far fa-chart-bar',
-            display: 'Informes.js'
+            display: 'Informes'
         },
         {   
             id: 2,
             option: 'Pedidos',
             optionType: 'main',
             iclass: 'fas fa-shipping-fast',
-            display: 'Pedidos.js'
+            display: 'Pedidos'
         },
         {
             id: 3,
             option: 'Horarios',
             optionType: 'main',
             iclass: 'far fa-clock',
-            display: 'Horarios.js'
+            display: 'Horarios'
         },
         {
             id: 4,
             option: 'Productos',
             optionType: 'main',
             iclass: 'fas fa-clipboard-list',
-            display: 'Productos.js'
+            display: 'Productos'
         },
         {   
             id: 5,
             option: 'Preguntas Frecuentes',
             optionType: 'sec',
             iclass: 'far fa-question-circle',
-            display: 'PregFrec.js'
+            display: 'PregFrec'
         },
         {
             id: 6,
             option: 'Centro de Ayuda',
             optionType: 'sec',
             iclass: 'fas fa-headset',
-            display: 'CentroAyuda.js'
+            display: 'CentroAyuda'
         },
     ]
 }

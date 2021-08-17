@@ -1,7 +1,7 @@
 .App {
   text-align: center;
   display: block;
-  background-color: #fff;
+  background-color: rgb(99, 99, 99);
 }
 
 @media (min-width: 768px){
@@ -13,7 +13,7 @@
 
 .Dash-display{
   margin: 10px;
-  background-color: #fff;
+  background-color: rgb(99, 99, 99);
 }
 
 

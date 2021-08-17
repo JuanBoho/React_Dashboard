@@ -1,5 +1,5 @@
 .Container{
-    background-color:#fff;
+    background-color:rgb(102, 102, 102);
 }
 
 .HourBanner{
@@ -8,7 +8,7 @@
     text-align: right;
     font-size: 36px;
     font-weight: 300;
-    color: darkgray;
+    color: #fff;
     
 }
 .cardsContainer{
@@ -26,9 +26,9 @@
     margin: 20px;
     padding: 10px;
     background-color: #14213D;
-    box-shadow: white 2px 2px;
+    box-shadow: rgba(255, 255, 255, 0.2) 0px 8px 24px;
     border-radius: 8px;
-    color: darkslategray;
+    color: #fff;
 }
 
 .card >h4{
@@ -53,13 +53,19 @@
     grid-template-columns: 60% 36%;
     column-gap: 40px;
     margin: 20px;
-    
+}
 
+@media (max-width:768px){
+    .graphContainer{
+        display: block;
+    }
 }
 .Homegraph{
-    background-color: #14213D;
+    background-color: #14213dcb;
     border-radius: 8px;
     margin-top: 20px ;
+    padding: 20px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
 .Homegraph > h4{
@@ -69,6 +75,6 @@
     padding-right: 30px;
 }
 
-.graphProductos{
-    color: red;
+.graphVentas{
+    display: block;
 }

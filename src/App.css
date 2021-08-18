@@ -1,7 +1,7 @@
 .App {
   text-align: center;
   display: block;
-  background-color: rgb(99, 99, 99);
+  background-color: #3a3a3a;
 }
 
 @media (min-width: 768px){
@@ -12,8 +12,31 @@
 }
 
 .Dash-display{
-  margin: 10px;
-  background-color: rgb(99, 99, 99);
+  animation: ease-in 5.3s forwards; 
+  transform: translateZ(130%);
 }
+
+
+
+.HourDateBanner{
+  padding: 30px 30px 10px 0;
+  text-align: right;
+  color: #FDB849;
+}
+
+.HourDateBanner> h2{
+  margin: 0;
+  font-size: 30px;
+  font-weight: 300;
+}
+
+.HourDateBanner> p{
+  margin: 0;
+  font-size: 16px;
+  font-weight: 300;
+}
+/*.Dash-display{
+
+}*/
 
 

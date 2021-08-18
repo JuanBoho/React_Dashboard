@@ -1,51 +1,71 @@
-import React, {Component, PureComponent} from 'react';
+import React, {useState } from 'react';
 import classes from './Home.module.css';
-import { LineChart, Line,BarChart, Bar, XAxis, YAxis, Tooltip, Legend, ResponsiveContainer } from 'recharts';
+import AnimatedNumber from 'react-animated-number'
+import { LineChart, Line,BarChart, PieChart, Pie, Cell, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer } from 'recharts';
 
-const currentHour = new Date().getHours() > 9 ? new Date().getHours() : '0' + new Date().getHours()  ;
-const currentMinutes = new Date().getMinutes() > 9 ? new Date().getMinutes() : '0' + new Date().getMinutes();
-
+/*--Utilidades--*/
+/*---Data--*/
 const data = [
     {
       name: 'Ene',
-      ventas: 1000,
+      ingresos: 6473,
     },
     {
       name: 'Feb',
-      ventas: 2320,
+      ingresos: 26020,
     },
     {
       name: 'Mar',
-      ventas: 2000,
+      ingresos: 21546,
     },
     {
       name: 'Abr',
-      ventas: 2780,
+      ingresos: 27981,
     },
     {
       name: 'May',
-      ventas: 1890,
+      ingresos: 16990,
     },
     {
       name: 'Jun',
-      ventas: 2390,
+      ingresos: 28492,
     },
     {
       name: 'Jul',
-      ventas: 3490,
+      ingresos: 36671,
     },
   ];
+const data02 =[{name: 'Positivas', value: 652} , {name: 'Negativas', value: 54}];
 
-const VentasLineChart = ()=>{
+const CustomExpColors = ["#fdb849","#FD4949"];
+const CusExpPercentages= (data)=>{
+    var values =[];
+    let percentages = []
+
+    data.map((item,ix)=>{
+        values.push(item.value);
+    })
+
+    let values_sum = values.reduce(function (a, b){return a + b;}, 0);
+    
+    values.map( (item,ix)=>{ percentages.push( (item * 100) / values_sum) } )
+
+    return(
+        percentages
+    );
+    }
+
+/*---Grahp Generators--*/
+/*Line Chart*/
+const IngresosLineChart = ()=>{
     
     return(
-        <ResponsiveContainer width="99%" height={300}>
-            <LineChart                   
-            
+        <ResponsiveContainer width="98%" height={300}>
+            <LineChart 
             data={data}
             margin={{
             top: 15,
-            right: 20,
+            right: 10,
             left: 15,
             bottom: 5,
             }}
@@ -62,7 +82,7 @@ const VentasLineChart = ()=>{
                 domain={['auto', 'auto']}
                 axisLine={false} 
                 tickLine={false}
-                ticks={[0,1000,2000,3000,4000]}
+                ticks={[0,10000,20000,30000,40000]}
                 style={{fill:'#FDB849'
                 }}
             />
@@ -77,7 +97,7 @@ const VentasLineChart = ()=>{
             
             <Line 
                 type="monotone" 
-                dataKey="ventas" 
+                dataKey="ingresos" 
                 stroke="#FDB849" 
                 dot={false}
                 />
@@ -85,85 +105,174 @@ const VentasLineChart = ()=>{
         </LineChart>
         </ResponsiveContainer> );
 }
-
-
-const ProductosBarChart = () =>{
+/*PieChart*/
+const CustomExpPieChart = ()=>{
     return(
-        <ResponsiveContainer width="99%" height={300}>
-            <BarChart  data={data} margin={{
-            top: 15,
-            right: 30,
-            left: 20,
-            bottom: 5,
-            }}>
-            <XAxis dataKey="name" 
-                axisLine={false}
-                tickLine={false}
-                style={{fill:'#FDB849'
-                }}/>
-            <Tooltip 
-                cursor={{
-                    fill:'none'}}
-                contentStyle={{backgroundColor:'#000000ea',
-                               border:'none'}}
-                labelStyle={{color: '#FDB849'}}
-            />
-            <Bar dataKey="ventas" fill="#FDB849"   />
-        </BarChart>
-        </ResponsiveContainer>
+        <ResponsiveContainer width="99%" height={180}>
+        <PieChart width="100%" height="100%">
+            <Pie data={data02} dataKey="value" cx="50%" cy="50%" innerRadius={40} outerRadius={65}>
+                { data.map((entry, index) => (
+                    <Cell key={`cell-${index}`} fill={CustomExpColors[index]} stroke ="none"/>
+                    ))
+                }
+            </Pie>
+        </PieChart>
+      </ResponsiveContainer>
     );
 }
 
+/*-----------------------HOME--------------------------------*/
 const Home = ()=>{
 
     return(
-        
         <div className={classes.Container}>
-
-            <p className={classes.HourBanner}>{`${currentHour}:${currentMinutes}`}</p>
 
             <div className={classes.cardsContainer}>
                 <div className={classes.card}>
-                    <h4>Pedidos</h4>
-                    <hr></hr>
-                    <p>8</p>
+                    <h2>Ordenes</h2>
+                    <div className={classes.cardSub}>
+                        <p>Recibidas</p>
+                        <h4>
+                            <AnimatedNumber
+                                value={841}
+                                initialValue ={0}
+                                duration = {600}
+                                style={{
+                                    fontSize: 20
+                                }}
+                                formatValue={n => n.toFixed(0)}
+                            />
+                        </h4>
+                    </div>
+                    <div className={classes.cardSub}>
+                        <p>Completadas</p>
+                        <p><AnimatedNumber
+                                value={836}
+                                initialValue ={0}
+                                duration = {600}
+                                formatValue={n => n.toFixed(0)}
+                            />
+                        </p>
+                    </div>
                 </div>
 
                 <div className={classes.card}>
-                    <h4>Cancelados</h4>
-                    <hr></hr>
-                    <p>1</p>
+                    <h2>Ventas</h2>
+
+                    <div className={classes.cardSub}>
+                            <p>Totales</p>
+                            <h4>
+                                <AnimatedNumber
+                                value={1247}
+                                initialValue ={0}
+                                duration = {800}
+                                formatValue={n => n.toFixed(0)}
+                                />
+                            </h4>
+                    </div>
+                    <div className={classes.cardSub}>
+                            <p>Este mes</p>
+                            <p>
+                                <AnimatedNumber
+                                value={36}
+                                initialValue ={0}
+                                duration = {800}
+                                formatValue={n => n.toFixed(0)}
+                                />
+                            </p>
+                    </div>
+                    
                 </div>
 
                 <div className={classes.card}>
-                    <h4>Sucursales en Operación</h4>
-                    <hr></hr>
-                    <p>2/2</p>
+                    <h2>Ingresos</h2>
+                    <div className={classes.cardSub}>
+                        <p>Totales</p>
+                        <h4>$
+                            <AnimatedNumber
+                                value={238673.92}
+                                initialValue ={0}
+                                duration = {1200}
+                                formatValue={n => n.toFixed(2)}
+                            />
+                        </h4>
+                    </div>
+                    <div className={classes.cardSub}>
+                        <p>Este mes</p>
+                        <p>$
+                            <AnimatedNumber
+                                value={28945.16}
+                                initialValue ={0}
+                                duration = {1200}
+                                formatValue={n => n.toFixed(2)}
+                            />
+                        </p>
+                    </div>
+                </div>
+
+                <div className={classes.card}>
+                    <h2>Saldo</h2>
+                    <div className={classes.cardSub}>
+                        <p>Disponible</p>
+                        <h4>$
+                        <AnimatedNumber
+                                value={128432.64}
+                                initialValue ={0}
+                                duration = {1500}
+                                formatValue={n => n.toFixed(2)}
+                            />
+                        </h4>
+                        
+                    </div>
+                    <div className={classes.cardSub}>
+                        <p>Inversiones</p>
+                        <p>$
+                            <AnimatedNumber
+                            value={110241.28}
+                            initialValue ={0}
+                            duration = {1500}
+                            formatValue={n => n.toFixed(0)}
+                            />
+                        </p>
+                    </div>
+                    <p></p>
                 </div>
             </div>  
             
             <div className={classes.graphContainer}>
             
                 <div className={classes.Homegraph}>
-                    <h4>Ventas</h4>
+                    <h4>Ingresos</h4>
                     <div className={classes.graphVentas}>
-                        <VentasLineChart/>
+                        <IngresosLineChart/>
                     </div>
                 </div>
             
                 <div className={classes.Homegraph}>
-                    <h4>Productos</h4>
-                    <div className={classes.graphProductos}>
-                        <ProductosBarChart/>
+                    <h4>Opiniones</h4>
+
+                    <div className={classes.graphCustExp}>
+                        <h2>{data02[0].value + data02[1].value}</h2>
+                        <CustomExpPieChart/>
                     </div>
+
+                    <div className={classes.CustExpStats}>
+                            
+                        <div className={classes.CustExpStatsPos}>
+                            <h4>{Math.round(CusExpPercentages(data02)[0] * 100)/100 +"%"}</h4>
+                            <p>{data02[0].name}</p>
+                        </div>
+                        <div className={classes.CustExpStatsNeg}>
+                            <h4>{Math.round(CusExpPercentages(data02)[1] * 100)/100 +"%"}</h4>
+                            <p>{data02[1].name}</p>
+                        </div>
+                    </div>
+                    
                 </div>
 
             </div>
            
-
         </div>
-
-        
     );
 }
 

@@ -1,4 +1,5 @@
 import React, { PureComponent } from 'react';
+import classes from './Informes.module.css'
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 
 const data = [
@@ -46,32 +47,43 @@ const data = [
   },
 ];
 
-export default class Informes extends PureComponent {
-
-  render() {
-    return (
-      <ResponsiveContainer width="100%" height="100%">
-        <LineChart
-          width={100}
-          height={50}
-          data={data}
-          margin={{
-            top: 15,
-            right: 30,
-            left: 20,
-            bottom: 5,
-          }}
-        >
-          <CartesianGrid strokeDasharray="3 3" />
-          <XAxis dataKey="name" />
-          <YAxis />
-          <Tooltip />
-          <Legend />
-          <Line type="monotone" dataKey="pv" stroke="#8884d8" activeDot={{ r: 8 }} />
-          <Line type="monotone" dataKey="uv" stroke="#82ca9d" />
-        </LineChart>
+/*
+const ProductosBarChart = () =>{
+  return(
+      <ResponsiveContainer width="99%" height={250}>
+          <BarChart  data={data} margin={{
+          top: 15,
+          right: 30,
+          left: 20,
+          bottom: 5,
+          }}>
+          <XAxis dataKey="name" 
+              axisLine={false}
+              tickLine={false}
+              style={{fill:'#FDB849'
+              }}/>
+          <Tooltip 
+              cursor={{
+                  fill:'none'}}
+              contentStyle={{backgroundColor:'#000000ea',
+                             border:'none'}}
+              labelStyle={{color: '#FDB849'}}
+          />
+          <Bar dataKey="ventas" fill="#FDB849"   />
+      </BarChart>
       </ResponsiveContainer>
-    );
-  }
+  );
+}
+*/
+
+const Informes = ()=> {
+  return(
+    <div className={classes.Container}>
+      <div>
+        
+      </div>
+    </div>
+  );
 }
 
+export default Informes;

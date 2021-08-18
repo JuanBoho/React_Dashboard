@@ -1,12 +1,12 @@
 import React from 'react';
 
 
-const Productos = (props)=>{
+const Pedidos = (props)=>{
 
     return(
 
-        <p>Productos</p>
+        <p>Pedidos</p>
     );
 }
 
-export default Productos;
+export default Pedidos;

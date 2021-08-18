@@ -21,6 +21,15 @@ class App extends Component{
     this.setState({currentDisplayPos: pos});
   }
 
+  
+  /*--Utilities--*/
+  dates ={
+    currentDate: new Date().toDateString(),
+    currentHour: new Date().getHours() > 9 ? new Date().getHours() : '0' + new Date().getHours(),
+    currentMinutes: new Date().getMinutes() > 9 ? new Date().getMinutes() : '0' + new Date().getMinutes()
+  }
+
+
   render(){
     return (
       <div className="App">
@@ -30,8 +39,11 @@ class App extends Component{
           currentSelectedOption = {this.state.currentSelectedOption}/>
         
         <div className="Dash-display">
+          <div className="HourDateBanner">
+            <h2>{this.dates.currentHour + ':' + this.dates.currentMinutes}</h2>
+            <p>{this.dates.currentDate}</p>
+          </div>
           <ContentDisplay currentDisplayPos = {this.state.currentDisplayPos}/>
-
         </div>
       
       </div>

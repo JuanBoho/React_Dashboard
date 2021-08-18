@@ -47,29 +47,33 @@ const Panel = (props)=>{
 
 
     return(
+        
         <div className ={classes.panelContainer}>
-        
-        <div className={classes.Logo}>
-            <i class="fas fa-mortar-pestle"></i>
-            <p>MyCompany</p>
+            <aside>
+                <div className={classes.Logo}>
+                    <i class="fas fa-mortar-pestle"></i>
+                    <p>MyCompany</p>
+                </div>
+
+                <div className={classes.PanelNav}>
+                    <hr className={classes.Hr}></hr>
+                    {PanelOptions[0]}
+                </div>
+                
+
+                <div className={classes.SecOptions}>
+                    <hr className={classes.Hr}></hr>
+                    {PanelOptions[1]}
+                </div>
+                
+                
+                <a className={classes.copy} href="https://github.com/JuanBoho" target="_blank">
+                    
+                    <i className="fab fa-creative-commons"></i>
+                    <p >by JuanBoho, 2021</p>
+                </a> 
+            </aside>
         </div>
-
-        <div className={classes.PanelNav}>
-            <hr className={classes.Hr}></hr>
-            {PanelOptions[0]}
-        </div>
-        <hr className={classes.Hr}></hr>
-
-        {PanelOptions[1]}
-        
-        
-        <a className={classes.copy} href="https://github.com/JuanBoho" target="_blank">
-            
-            <i className="fab fa-creative-commons"></i>
-            <p >by JuanBoho, 2021</p>
-        </a> 
-
-    </div>
     );
 
 }

@@ -1,17 +1,17 @@
 .panelContainer{
     background-color: #000000ea;
-    color:aliceblue;
     padding: 10px;
+    
 }
 
 .Hr{
-    margin: 0 20px 10px 10px;
-    border: 1px solid rgba(246, 252, 252, 0.137);
+    margin: 24px 0;
+    border: 1px solid rgba(246, 252, 252, 0.082);
 }
 .Logo{
     display: none;
-    margin-top: 20px;
-    font-size: 40px;
+    margin-top: 10px;
+    font-size: 36px;
     color: #FDB849;
 }
 
@@ -28,10 +28,10 @@
 }
 
 .PanelNav{
-    margin-top: 40px;
-    margin-bottom: 40px;
+    margin-top: 20px;
+    margin-bottom: 70px;
     padding: 40px auto;
-    color:  rgba(246, 252, 252, 0.253);
+    color:  #333;
 }
 
 /*--------------Links Principales----------------*/
@@ -43,7 +43,7 @@
 }
 
 .PanelLinks:hover{
-    color: #fdb849;
+    color: #FDB849;
 }
 
 
@@ -76,10 +76,14 @@
 }
 
 /*-----------Links Secundarios------------*/
+.SecOptions{
+    margin: 40px 0;
+}
+
 .PanelSecLinks{
     display: flex;
     cursor: pointer;
-    font-size: 14px;
+    font-size: 12px;
     color: rgba(246, 252, 252, 0.253);
 }
 
@@ -92,13 +96,17 @@
 }
 
 .PanelSecLinks > i{
-    margin-top: 18px;
+    margin-top: 4px;
     padding: 0 10px;
+}
+
+.PanelSecLinks > p{
+    margin-top: 0;
 }
 
 .copy{
     display: flex;
-    margin-top: 24px;
+    margin-top: 20px;
     padding:  0 10px;
     text-align: center;
     text-decoration: none;

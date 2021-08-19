@@ -1,83 +1,35 @@
-import { classExpression } from '@babel/types';
 import React from 'react';
 import classes from './Pedidos.module.css'
 
 
-const Pedidos = ()=>{
+const Pedidos = (props)=>{
+
+
+    const Orders = props.data.Orders.map((item,pos) =>{
+        
+            return(
+                <div className={classes.Pedido}>
+                <div className={classes.PedidoTitle}>
+                    <p>{item.nombre}</p>
+                    <p>{item.hora}</p>
+                </div>
+                
+                <div className={classes.PedidoInfo}>
+                    <p><i className={props.data.OrdersIcons[0]}></i>{item.pedido}</p>
+                    <p><i className={props.data.OrdersIcons[1]}></i>{item.tel}</p>
+                    <p><i className={props.data.OrdersIcons[2]}></i>{item.direc}</p>
+                    <p><i className={props.data.OrdersIcons[3]}></i>{item.estado}</p>
+                    <a><p>Ver</p></a>
+                </div>
+            </div>
+            );
+        }
+    )
+
 
     return(
         <div className={classes.Container}>
-            <div className={classes.Pedido}>
-                <div className={classes.PedidoTitle}>
-                    <p>Camila Castelli</p>
-                    <p>09:23</p>
-                </div>
-                
-                <div className={classes.PedidoInfo}>
-                    <p><i class="fas fa-box"></i>12345</p>
-                    <p><i class="fas fa-phone-alt"></i>(+54) 11 5555-5555</p>
-                    <p><i class="fas fa-map-marker-alt"></i>Almirante Brownie 1371, 2F</p>
-                    <p><i class="fas fa-dolly"></i>En camino</p>
-                    <a><p>Ver</p></a>
-                </div>
-            </div>
-            <div className={classes.Pedido}>
-                <div className={classes.PedidoTitle}>
-                    <p>Camila Castelli</p>
-                    <p>09:23</p>
-                </div>
-                
-                <div className={classes.PedidoInfo}>
-                    <p><i class="fas fa-box"></i>12345</p>
-                    <p><i class="fas fa-phone-alt"></i>(+54) 11 5555-5555</p>
-                    <p><i class="fas fa-map-marker-alt"></i>Almirante Brownie 1371, 2F</p>
-                    <p><i class="fas fa-dolly"></i>En camino</p>
-                    <a><p>Ver</p></a>
-                </div>
-            </div>
-            <div className={classes.Pedido}>
-                <div className={classes.PedidoTitle}>
-                    <p>Camila Castelli</p>
-                    <p>09:23</p>
-                </div>
-                
-                <div className={classes.PedidoInfo}>
-                    <p><i class="fas fa-box"></i>12345</p>
-                    <p><i class="fas fa-phone-alt"></i>(+54) 11 5555-5555</p>
-                    <p><i class="fas fa-map-marker-alt"></i>Almirante Brownie 1371, 2F</p>
-                    <p><i class="fas fa-dolly"></i>En camino</p>
-                    <a><p>Ver</p></a>
-                </div>
-            </div>
-            <div className={classes.Pedido}>
-                <div className={classes.PedidoTitle}>
-                    <p>Camila Castelli</p>
-                    <p>09:23</p>
-                </div>
-                
-                <div className={classes.PedidoInfo}>
-                    <p><i class="fas fa-box"></i>12345</p>
-                    <p><i class="fas fa-phone-alt"></i>(+54) 11 5555-5555</p>
-                    <p><i class="fas fa-map-marker-alt"></i>Almirante Brownie 1371, 2F</p>
-                    <p><i class="fas fa-dolly"></i>En camino</p>
-                    <a><p>Ver</p></a>
-                </div>
-            </div>
-            <div className={classes.Pedido}>
-                <div className={classes.PedidoTitle}>
-                    <p>Camila Castelli</p>
-                    <p>09:23</p>
-                </div>
-                
-                <div className={classes.PedidoInfo}>
-                    <p><i class="fas fa-box"></i>12345</p>
-                    <p><i class="fas fa-phone-alt"></i>(+54) 11 5555-5555</p>
-                    <p><i class="fas fa-map-marker-alt"></i>Almirante Brownie 1371, 2F</p>
-                    <p><i class="fas fa-dolly"></i>En camino</p>
-                    <a><p>Ver</p></a>
-                </div>
-            </div>
-
+            {Orders}
         </div>
     );
 }

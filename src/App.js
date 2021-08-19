@@ -43,7 +43,7 @@ class App extends Component{
             <h2>{this.dates.currentHour + ':' + this.dates.currentMinutes}</h2>
             <p>{this.dates.currentDate}</p>
           </div>
-          <ContentDisplay currentDisplayPos = {this.state.currentDisplayPos}/>
+          <ContentDisplay currentDisplayPos = {this.state.currentDisplayPos} data={this.state.AppData}/>
         </div>
 
       </div>

@@ -9,7 +9,7 @@ import CentroAyuda from './CentroAyuda';
 
 const ContentDisplay = (props)=>{
 
-    const screens = [<Home/>, <Informes/>, <Pedidos/>, <Horarios/>, <Productos/>, <PregFrec/>, <CentroAyuda/>]
+    const screens = [<Home/>, <Informes/>, <Pedidos data={props.data}/>, <Horarios/>, <Productos/>, <PregFrec/>, <CentroAyuda/>]
 
     return(
         screens[props.currentDisplayPos]

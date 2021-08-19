@@ -26,7 +26,7 @@
 @keyframes opa {
     0%{
         background-color:#FDB849;
-        margin-bottom: 130px;
+        margin-bottom: 40px;
     }
     100%{
         background-color: #000;
@@ -42,16 +42,32 @@
     margin: 0;
     border-bottom: 1px Solid hotpink;
 }
+
 .PedidoTitle>p{
     margin: 4px 0;
 }
+
 .PedidoInfo{
-    display: flex;
-    justify-content: space-between;
-    margin-right: 10px;
+    display: grid;
+    grid-template-columns: 20% 25% 25% 25% 5%;
+    column-gap: 4px;
+    text-align: left;
     color: #e5e5e5;
 }
 
+@media (max-width:767px) {
+    .PedidoInfo{
+        display: block;
+        text-align: left;
+    }
+
+    .PedidoInfo> a > p{
+        text-align: center;
+        padding: 10px;
+        font-weight: 700;
+        color: #FDB849;
+    }
+}
 .PedidoInfo >p >i{
      margin-right: 10px;
 }

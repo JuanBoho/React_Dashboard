@@ -38,14 +38,14 @@ class App extends Component{
           onOptionClick = {this.onOptionClick} 
           currentSelectedOption = {this.state.currentSelectedOption}/>
         
-        <div className="Dash-display">
+        <div className="DashDisplay">
           <div className="HourDateBanner">
             <h2>{this.dates.currentHour + ':' + this.dates.currentMinutes}</h2>
             <p>{this.dates.currentDate}</p>
           </div>
           <ContentDisplay currentDisplayPos = {this.state.currentDisplayPos}/>
         </div>
-      
+
       </div>
     );
   }

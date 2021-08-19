@@ -1,11 +1,10 @@
 Dashboard Template #TODO:
 
 1. Panel:
-	- warnings sobre uso de 'class' para iconos, guardar Strings y toda la data
-	  en array tipo Product Data
-	- resolver posición cc del copy
 	-Hamburguer menu responsive
 2. Contenidos:
-
-	- Home: tres cartas con info relevante + dos graficas + bienvenido o lo que sea
+	-Pedidos : Muestra últimos 3 ó 5 en franja con resumen. En click dspliega info más detallada del pedido +
+	Imagenes e iconos
+	dirección, teléfono
+	estado de entrega
 3. Panel de Usuario?

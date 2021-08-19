@@ -1,0 +1,62 @@
+.Container{
+    background-color: #3a3a3a;
+    margin: 20px;
+}
+
+.Container> h2{
+    margin: 0;
+    padding: 0 20px;
+    text-align: left;
+    font-size: 20px;
+    font-weight: 300;
+    color: #FDB849;
+}
+
+.Pedido{
+    margin: 20px;
+    padding: 10px 20px;
+    background-color: #000;
+    box-shadow: rgb(0, 0, 0) 0px 8px 24px;
+    border-radius: 8px;
+    text-align: right;
+    color: #FDB849;
+    animation: opa .8s forwards;
+}
+
+@keyframes opa {
+    0%{
+        background-color:#FDB849;
+        margin-bottom: 130px;
+    }
+    100%{
+        background-color: #000;
+        margin-bottom: 20px;
+    }
+    
+}
+
+.PedidoTitle{
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    margin: 0;
+    border-bottom: 1px Solid hotpink;
+}
+.PedidoTitle>p{
+    margin: 4px 0;
+}
+.PedidoInfo{
+    display: flex;
+    justify-content: space-between;
+    margin-right: 10px;
+    color: #e5e5e5;
+}
+
+.PedidoInfo >p >i{
+     margin-right: 10px;
+}
+
+.PedidoInfo > a:hover{
+    color: #FDB849;
+    cursor: pointer;
+}

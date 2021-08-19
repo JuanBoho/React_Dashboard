@@ -4,19 +4,17 @@
   background-color: #3a3a3a;
 }
 
-@media (min-width: 768px){
-  .App{
-    display: grid;
-    grid-template-columns: 18% 82%;
+.DashDisplay{
+  margin-left: 240px;
+  padding-bottom: 20px;
+}
+
+@media (max-width:767px) {
+  .DashDisplay{
+    margin: 0;
   }
+  
 }
-
-.Dash-display{
-  animation: ease-in 5.3s forwards; 
-  transform: translateZ(130%);
-}
-
-
 
 .HourDateBanner{
   padding: 30px 30px 10px 0;

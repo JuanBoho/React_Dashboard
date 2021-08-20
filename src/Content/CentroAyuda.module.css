@@ -1,0 +1,129 @@
+.Container{
+    background-color: #3a3a3a;
+    margin: 20px 20px 0 20px;
+}
+
+.HelpTop{
+    margin: 20px;
+    display: grid;
+    grid-template-columns: 45% 55%;
+}
+@media (max-width:1200px) {
+    .HelpTop{
+        display: block;
+    }
+}
+
+.HelpTitle{
+    font-weight: 300;
+    text-align: left;
+    color: #FDB849;
+    text-align: center;
+    animation: helpintit 1.2s forwards;
+}
+
+@keyframes helpintit {
+    0%{
+        margin-top: 0;
+    }
+    100%{
+        margin-top: 80px;
+    }
+    
+}
+
+
+@media (min-width:1200px) {
+    .HelpTitle{
+        font-size: 50px;
+    }
+}
+
+.HOption{
+    margin: 20px;
+    background-color: #000;
+    box-shadow: rgb(0, 0, 0) 0px 8px 24px;
+    border-radius: 8px;
+    text-align: left;
+    color: #FDB849;
+    animation: helpin .8s forwards;
+}
+
+@keyframes helpin {
+    0%{
+        background-color:#1b1b1b;
+        margin-bottom: 40px;
+    }
+    100%{
+        background-color: #000;
+        margin-bottom: 20px;
+    }
+    
+}
+
+.HOption a{
+    display: flex;
+    margin: 0;
+}
+.HOption a>i{
+    margin-top: 10px;
+    padding: 0 10px;
+}
+.HOption > a> p{
+    margin: 4px;
+    font-size: 16px;
+    padding: 4px;
+}
+
+.HOption:hover{
+    border-left: 4px solid hotpink;
+    color: hotpink;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.HOption h4{
+    margin: 4px;
+    text-align: left;
+    font-size: 24px;
+    border-bottom: 1px solid hotpink;
+}
+
+.HelpBottom{
+    margin: 20px;
+}
+
+.TutorialContainer> div{
+    padding: 10px 20px;
+}
+
+.TutorialContainer> div>p{
+    color: #fff;
+}
+
+.ContactoItems{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 20px;
+    padding: 0 20px;
+    background-color: #000;
+    box-shadow: rgb(0, 0, 0) 0px 8px 24px;
+    border-radius: 8px;
+    color: #FDB849;
+}
+
+@media (max-width:1200px) {
+    .ContactoItems{
+        display: block;
+    }
+}
+
+.ContactoItem{
+    display: flex;
+}
+
+.ContactoItem > i{
+    margin-top: 20px;
+    padding: 0 10px;
+}
+

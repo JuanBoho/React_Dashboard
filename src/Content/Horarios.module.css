@@ -1,0 +1,79 @@
+.Container{
+    background-color: #3a3a3a;
+    margin: 20px;
+}
+
+
+.CardsContainer{
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+@media (max-width: 767px) {
+    .CardsContainer{
+        display: block;
+    }
+}
+
+.card{
+    margin: 20px;
+    padding: 20px;
+    background-color: #000000ea;
+    box-shadow: rgb(0, 0, 0) 0px 8px 24px;
+    border-radius: 8px;
+    color: #fff;
+    animation: horin .8s forwards;
+}
+
+@keyframes horin {
+    0%{
+        background-color: #1b1b1b;
+        margin-left: -40px;
+        margin-right: -40px;
+    }
+    100%{
+        background-color: #000000ea;
+        margin-right: 20px;
+        margin-left: 20px;
+    }
+    
+}
+
+.card > h2{
+    margin: 0;
+    font-size: 20px;
+    font-weight: 300;
+    text-align: right;
+    color: #FDB849;
+}
+.cardSubTitle{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px Solid hotpink;
+}
+
+.cardSubTitle > h4{
+    margin: 10px 0;
+}
+
+.cardInfo{
+    display: flex;
+    justify-content: space-between;
+}
+
+.Feriado{
+    margin-top: 20px;
+}
+.Feriado > p{
+    margin: 0;
+    text-align: left;
+}
+
+.FeriadoDate{
+    color: #e5e5e5;
+    font-size: 12px;
+    text-align: left;
+}
+
+.SwitchContainer{
+    margin-top: 25px;
+}

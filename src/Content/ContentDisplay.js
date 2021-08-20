@@ -4,12 +4,11 @@ import Informes from './Informes';
 import Pedidos from './Pedidos';
 import Horarios from './Horarios';
 import Productos from './Productos';
-import PregFrec from './PregFrec';
 import CentroAyuda from './CentroAyuda';
 
 const ContentDisplay = (props)=>{
 
-    const screens = [<Home/>, <Informes/>, <Pedidos data={props.data}/>, <Horarios/>, <Productos/>, <PregFrec/>, <CentroAyuda/>]
+    const screens = [<Home/>, <Informes/>, <Pedidos data={props.data}/>, <Horarios data={props.data}/>, <Productos/>, <CentroAyuda/>]
 
     return(
         screens[props.currentDisplayPos]

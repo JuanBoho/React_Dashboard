@@ -38,13 +38,6 @@ const AppData = {
             iclass: 'fas fa-clipboard-list',
             display: 'Productos'
         },
-        {   
-            id: 5,
-            option: 'Preguntas Frecuentes',
-            optionType: 'sec',
-            iclass: 'far fa-question-circle',
-            display: 'PregFrec'
-        },
         {
             id: 6,
             option: 'Centro de Ayuda',
@@ -106,6 +99,38 @@ const AppData = {
         "fas fa-phone-alt",
         "fas fa-map-marker-alt",
         "fas fa-dolly"
+    ],
+    Feriados: [
+        {
+            id: 0,
+            feriado: 'Año Nuevo',
+            dia: '1 de Enero'
+        },
+        {
+            id: 1,
+            feriado: 'Carnaval',
+            dia: '15 de Febrero'
+        },
+        {   
+            id: 2,
+            feriado: 'Carnaval',
+            dia: '16 de Febrero'
+        },
+        {
+            id: 3,
+            feriado: 'Día del trabajador',
+            dia: '1 de Mayo'
+        },
+        {
+            id: 4,
+            feriado: 'Día de la Independencia',
+            dia: '9 de Julio'
+        },
+        {   
+            id: 5,
+            feriado: 'Navidad',
+            dia: '25 de Diciembre'
+        }
     ]
 }
 

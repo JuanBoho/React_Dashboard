@@ -87,13 +87,13 @@
 
 /*-----------Links Secundarios------------*/
 .SecOptions{
-    margin: 40px 0;
+    margin: 60px 0;
 }
 
 .PanelSecLinks{
     display: flex;
     cursor: pointer;
-    font-size: 12px;
+    font-size: 14px;
     color: rgba(246, 252, 252, 0.253);
 }
 
@@ -118,7 +118,6 @@
     display: flex;
     margin-top: 20px;
     padding:  0 10px;
-    
     text-align: center;
     text-decoration: none;
     font-size: 12px;

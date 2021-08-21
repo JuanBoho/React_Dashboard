@@ -4,4 +4,7 @@ Dashboard Template #TODO:
 	-Hamburguer menu responsive
 2. Contenidos:
 	CentroAyuda: FAQS, texto animation, icons, banner bottom
-3. Panel de Usuario?
+3. Unificar Utilidades:
+	Estilos de Cards
+	clase SwitchExample
+	

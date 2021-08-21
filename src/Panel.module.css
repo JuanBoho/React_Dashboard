@@ -59,16 +59,17 @@
 
 .PanelLinkSelected{
     color: #FDB849;
-    animation: sidebar .3s forwards;  
+    animation: sidebar 0.5s forwards;  
 }
 
 @keyframes sidebar {
     from {
-        border-left: 0px solid #fdb849;
+        border-left: 0px solid hotpink;
         margin-left: 0;
     }
     to {
-        border-left: 4px solid #fdb849;
+        border-radius: 8px 0 0 58px;
+        border-left: 4px solid #FDB849;
         margin-left: 4px;
     }
   }

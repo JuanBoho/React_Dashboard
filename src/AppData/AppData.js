@@ -94,12 +94,6 @@ const AppData = {
 
         }
     ],
-    OrdersIcons:[
-        "fas fa-box",
-        "fas fa-phone-alt",
-        "fas fa-map-marker-alt",
-        "fas fa-dolly"
-    ],
     Feriados: [
         {
             id: 0,
@@ -131,6 +125,103 @@ const AppData = {
             feriado: 'Navidad',
             dia: '25 de Diciembre'
         }
+    ],
+    Productos:[
+        {
+            id:0,
+            Cat: "Promos",
+            items: [
+                {
+                    sku: "0011",
+                    name: "Promo 1",
+                    price: "$"+80
+
+                },
+                {
+                    sku: "0012",
+                    name: "Promo 2",
+                    price: "$"+130
+                },
+                {
+                    sku: "0013",
+                    name: "Promo 3",
+                    price: "$"+160
+                },
+                {
+                    sku: "0014",
+                    name: "Dcto Vimex",
+                    price: "$"+65
+                }
+            ]
+        },
+        {
+            id:1,
+            Cat: "Categoría A",
+            items: [
+                {
+                    sku: "0001",
+                    name: "Producto A1",
+                    price: "$"+100
+                },
+                {
+                    sku: "0002",
+                    name: "Producto A2",
+                    price: "$"+100
+                },
+                {
+                    sku: "0003",
+                    name: "Producto A3",
+                    price: "$"+100
+                }
+            ] 
+        },
+        {
+            id:2,
+            Cat: "Categoría B",
+            items: [
+                {
+                    sku: "0004",
+                    name: "Producto 1B",
+                    price: "$"+150
+                },
+                {
+                    sku: "0005",
+                    name: "Producto 2B",
+                    price: "$"+150
+                },
+                {
+                    sku: "0006",
+                    name: "Producto 3B",
+                    price: "$"+150
+                },
+                {
+                    sku: "0007",
+                    name: "Producto 4B",
+                    price: "$"+150
+                },
+            ] 
+        },
+        {
+            id:3,
+            Cat: "Categoría C",
+            items: [
+                {
+                    sku: "0008",
+                    name: "Producto 1C",
+                    price: "$"+200
+                },
+                {
+                    sku: "0009",
+                    name: "Producto 2C",
+                    price: "$"+200
+                },
+                {
+                    sku: "0010",
+                    name: "Producto 3C",
+                    price: "$"+200
+                },
+            ] 
+        }   
     ]
 }
 

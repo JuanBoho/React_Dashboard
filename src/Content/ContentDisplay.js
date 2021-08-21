@@ -8,7 +8,7 @@ import CentroAyuda from './CentroAyuda';
 
 const ContentDisplay = (props)=>{
 
-    const screens = [<Home/>, <Informes/>, <Pedidos data={props.data}/>, <Horarios data={props.data}/>, <Productos/>, <CentroAyuda/>]
+    const screens = [<Home/>, <Informes/>, <Pedidos data={props.data}/>, <Horarios data={props.data}/>, <Productos data={props.data}/>, <CentroAyuda/>]
 
     return(
         screens[props.currentDisplayPos]

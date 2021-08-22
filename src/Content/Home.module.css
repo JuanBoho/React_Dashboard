@@ -101,7 +101,7 @@
 
 .graphCustExp >h2{
     margin:20px 0 0 0;
-    color: #FDB849;
+    color: #fff;
     font-size: 26px;
 }
 .CustExpStats{
@@ -114,11 +114,11 @@
     margin: 6px;
 }
 .CustExpStatsPos > h4{
-    color:#66CC00;
+    color:#fff;
     margin: 10px 0;
 }
 
 .CustExpStatsNeg > h4{
-    color:#F50000;
+    color:hotpink;
     margin: 10px 0;
 }

@@ -1,3 +1,87 @@
 .Container{
     background-color:#3a3a3a;
 }
+
+.CardsContainer{
+    display: block;
+}
+
+@media (max-width:767px) {
+    .CardsContainer{
+        display: block;
+    }
+}
+.card{
+    margin: 20px;
+    padding: 20px;
+    background-color: #000000ea;
+    box-shadow: rgb(0, 0, 0) 0px 8px 24px;
+    border-radius: 8px;
+    color: #fff;
+    animation: horin .8s forwards;
+}
+
+@keyframes horin {
+    0%{
+        background-color: #1b1b1b;
+        margin: 0 -20px 300px -20px;
+    }
+    100%{
+        background-color: #000000ea;
+        margin: 20px;
+    }
+}
+
+.card:hover{
+    border-left: 4px Solid hotpink;
+    box-shadow: rgba(255, 105, 180, 0.37) 0px 8px 24px;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+
+.cardSubTitle{
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    color: #FDB849;
+    border-bottom: 1px Solid hotpink;
+}
+
+.cardSubTitle > h2{
+    margin: 5px 0;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.cardSubTitle > i{
+    margin-top: 4px;
+    font-size: 30px;
+}
+
+.cardInfo{
+    text-align: left;
+    font-size: 20x;
+}
+
+
+
+.Volver{
+    width: 100px;
+    display: flex;
+    margin: 20px;
+    padding: 0 10px;
+    border-radius: 8px;
+    color: #FDB849;
+}
+
+.Volver:hover{
+    color:hotpink;
+    border-left: 2px solid hotpink;
+    cursor: pointer;
+}
+
+.Volver > i{
+    margin-top: 20px;
+    padding-right: 5px;
+}

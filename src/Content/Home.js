@@ -37,7 +37,7 @@ const data = [
   ];
 const data02 =[{name: 'Positivas', value: 652} , {name: 'Negativas', value: 54}];
 
-const CustomExpColors = ["#fdb849","#FD4949"];
+const CustomExpColors = ["hotpink","rgba(255, 105, 180, 0.529)"];
 const CusExpPercentages= (data)=>{
     var values =[];
     let percentages = []
@@ -74,7 +74,7 @@ const IngresosLineChart = ()=>{
                 dataKey="name" 
                 axisLine={false} tickLine={false} 
                 padding={{ left: 15 }}
-                style={{fill:'#FDB849'
+                style={{fill:'#FFF'
                 }}
             />
             
@@ -83,7 +83,7 @@ const IngresosLineChart = ()=>{
                 axisLine={false} 
                 tickLine={false}
                 ticks={[0,10000,20000,30000,40000]}
-                style={{fill:'#FDB849'
+                style={{fill:'#FFF'
                 }}
             />
 
@@ -91,14 +91,14 @@ const IngresosLineChart = ()=>{
                 contentStyle={{
                     backgroundColor:'#000000ea',
                     border:'none'}}
-                    labelStyle={{color: '#FDB849'
+                    labelStyle={{color: '#FFF'
                 }}
             />
             
             <Line 
                 type="monotone" 
                 dataKey="ingresos" 
-                stroke="#FDB849" 
+                stroke="hotpink" 
                 dot={false}
                 />
 

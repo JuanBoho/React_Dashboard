@@ -68,8 +68,8 @@
         margin-left: 0;
     }
     to {
-        border-radius: 8px 0 0 58px;
-        border-left: 4px solid #FDB849;
+        border-radius: 18px 0  0 0;
+        border-left: 4px solid hotpink;
         margin-left: 4px;
     }
   }

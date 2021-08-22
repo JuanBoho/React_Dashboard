@@ -3,8 +3,8 @@ Dashboard Template #TODO:
 1. Panel:
 	-Hamburguer menu responsive
 2. Contenidos:
-	CentroAyuda: FAQS, texto animation, icons, banner bottom
+	animar mejor "ins" de pedidos, productos y horarios. cards desde distintas direcciones
 3. Unificar Utilidades:
 	Estilos de Cards
 	clase SwitchExample
-	
+

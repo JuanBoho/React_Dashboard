@@ -143,11 +143,6 @@ const AppData = {
                     price: "$"+130
                 },
                 {
-                    sku: "0013",
-                    name: "Promo 3",
-                    price: "$"+160
-                },
-                {
                     sku: "0014",
                     name: "Dcto Vimex",
                     price: "$"+65

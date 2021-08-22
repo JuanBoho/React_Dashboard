@@ -78,7 +78,7 @@
 .HOption:hover{
     border-left: 4px solid hotpink;
     color: hotpink;
-    border-radius: 10px;
+    border-radius: 18px 0  0 0;
     cursor: pointer;
 }
 

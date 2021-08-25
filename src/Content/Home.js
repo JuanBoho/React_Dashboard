@@ -1,6 +1,6 @@
 import React, {useState } from 'react';
 import classes from './Home.module.css';
-import AnimatedNumber from 'react-animated-number'
+import AnimatedNumber from 'react-animated-number';
 import { LineChart, Line,BarChart, PieChart, Pie, Cell, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer } from 'recharts';
 
 /*--Utilidades--*/

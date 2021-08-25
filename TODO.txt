@@ -7,4 +7,5 @@ Dashboard Template #TODO:
 3. Unificar Utilidades:
 	Estilos de Cards
 	clase SwitchExample
+	checks horarios
 

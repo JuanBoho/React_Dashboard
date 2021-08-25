@@ -2,15 +2,7 @@
     background-color:#3a3a3a;
 }
 
-.CardsContainer{
-    display: block;
-}
-
-@media (max-width:767px) {
-    .CardsContainer{
-        display: block;
-    }
-}
+/*-------------Informes Home--------------------*/
 .card{
     margin: 20px;
     padding: 20px;
@@ -64,7 +56,7 @@
     font-size: 20x;
 }
 
-
+/*-------- Informe--------*/
 
 .Volver{
     width: 100px;
@@ -84,4 +76,181 @@
 .Volver > i{
     margin-top: 20px;
     padding-right: 5px;
+}
+
+/*-------- Informe Diario----------*/
+.DiaContainer{
+    display: grid;
+    grid-template-columns: 65% 35%;
+    animation: infoin .8s forwards;
+}
+
+@keyframes infoin {
+    0%{
+        margin: 0 -20px 300px -20px;
+    }
+    100%{
+        margin: 20px;
+    }
+}
+@media (max-width:767px) {
+    .DiaContainer{
+        display: block;
+    }
+}
+.InformeCard{
+    margin: 20px;
+    padding: 10px 20px;
+    background-color: #000000ea;
+    box-shadow: rgb(0, 0, 0) 0px 8px 24px;
+    border-radius: 8px;
+    text-align: left;
+    color: #fff;
+}
+
+.InformeCard > h2{
+    margin-top: 10px;
+    padding: 5px 0;
+    text-align: right;
+    color: #FDB849;
+    font-weight: 300;
+    border-bottom: 1px solid hotpink;
+}
+.InformeTab{
+    display: grid;
+    grid-template-columns: 40% 30% 30%;
+    
+}
+
+.InformeTab > div > h4{
+    margin: 10px 0;
+}
+
+.InformeSubTo{
+    display: grid;
+    grid-template-columns: 70% 30%;
+    border-top: 1px solid rgb(56, 55, 56);
+    color: #FDB849;
+}
+
+.InformeSubTo > h2{
+    font-weight: 300;
+}
+
+.TopProducts > h2{
+    margin-top: 10px;
+    padding: 5px 0;
+    text-align: right;
+    color: #FDB849;
+    font-weight: 300;
+    border-bottom: 1px solid hotpink;
+}
+
+.TopProductsInfo{
+    display: flex;
+    justify-content: space-between;
+}
+
+.ObjetivosContainer{
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+@media (max-width:767px) {
+    .ObjetivosContainer{
+        display: block;
+    }
+}
+.Objetivos{
+    color: #FDB849;
+    font-size: 20px;
+}
+
+
+.Objetivos > h4{
+    margin: 10px 0;
+    padding: 5px;
+    font-weight: 300;
+    text-align: right;
+    border-bottom: 1px solid hotpink;
+}
+
+.ObjInfo{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 20px;
+    color: #fff;
+}
+
+.ObjInfo>p{
+    margin: 0;
+    font-size: 18px;
+}
+
+
+.ObjLogrado{
+    margin: 0;
+    padding-left: 20px;
+    color: green;
+}
+
+.ObjNoLogrado{
+    margin: 0;
+    padding-left: 20px;
+    color: red;
+}
+
+
+
+/*----------------Informe Productividad--------*/
+.InformeProd{
+    display: grid;
+    grid-template-columns: 65% 35%;
+}
+.GraphCard{
+    margin: 20px;
+    padding: 10px 20px;
+    background-color: #000000ea;
+    box-shadow: rgb(0, 0, 0) 0px 8px 24px;
+    border-radius: 8px;
+    text-align: left;
+    color: #fff;
+    animation: prodin .8s forwards;
+}
+
+@keyframes prodin {
+    0%{
+        padding: 0 20px 150px 20px;
+    }
+    100%{
+        padding: 10px 20px;
+    }
+}
+
+.GraphCard > h2{
+    padding: 5px 0;
+    font-weight: 300;
+    color: #FDB849;
+    border-bottom: 1px solid hotpink;
+}
+.GraphCardInfo{
+    display: flex;
+    justify-content: space-between;
+}
+
+/*----------------Informe Ventas--------*/
+
+.InformeVentaTab{
+    display: flex;
+    justify-content: space-between;
+    animation: ventain .8s forwards;
+}
+
+@keyframes ventain {
+    0%{
+        padding: 0 150px 150px 20px;
+    }
+    100%{
+        padding: 10px 20px;
+    }
 }

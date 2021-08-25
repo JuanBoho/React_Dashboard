@@ -8,7 +8,7 @@
 
 @media (max-width:767px) {
     .panelContainer{
-      display: none;
+      display: block;
     }
     
 }

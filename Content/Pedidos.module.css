@@ -1,0 +1,71 @@
+.Container{
+    background-color: #e5e5e5;
+    margin: 20px;
+}
+
+.Pedido{
+    margin: 20px;
+    padding: 10px 20px;
+    background: rgb(229,229,229);
+    background: radial-gradient(circle, rgba(229,229,229,1) 0%, rgba(245,245,245,1) 100%);
+    box-shadow: #0d30242c 0px 4px 12px;
+    border-radius: 8px;
+    text-align: right;
+    animation: opa .8s forwards;
+}
+
+@keyframes opa {
+    0%{
+        margin-bottom: 100px;
+    }
+    100%{
+        margin-bottom: 20px;
+    }
+    
+}
+
+.PedidoTitle{
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    font-weight: 300;
+    margin: 0;
+    color:#092018;
+    border-bottom: 1px Solid #FDB849;
+}
+
+.PedidoTitle>p{
+    margin: 4px 0;
+}
+
+.PedidoInfo{
+    display: grid;
+    grid-template-columns: 20% 25% 25% 25% 5%;
+    column-gap: 4px;
+    text-align: left;
+    font-weight: 300;
+    color:#1D4937;
+    
+}
+
+@media (max-width:767px) {
+    .PedidoInfo{
+        display: block;
+        text-align: left;
+    }
+
+    .PedidoInfo> a > p{
+        text-align: center;
+        padding: 10px;
+        font-weight: 700;
+        color: #FDB849;
+    }
+}
+.PedidoInfo >p >i{
+     margin-right: 10px;
+}
+
+.PedidoInfo > a:hover{
+    color: #FDB849;
+    cursor: pointer;
+}

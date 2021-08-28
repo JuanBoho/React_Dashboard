@@ -1,5 +1,5 @@
 .Container{
-    background-color: #3a3a3a;
+    background-color: #e5e5e5;
     margin: 20px;
 }
 
@@ -17,22 +17,21 @@
 .card{
     margin: 20px;
     padding: 20px;
-    background-color: #000000ea;
-    box-shadow: rgb(0, 0, 0) 0px 8px 24px;
+    background: rgb(229,229,229);
+    background: radial-gradient(circle, rgba(229,229,229,1) 0%, rgba(245,245,245,1) 100%);
+    box-shadow: #0d30242c 0px 4px 12px;
     border-radius: 8px;
-    color: #fff;
-    animation: horin .8s forwards;
+    color: #0D3024;
+    animation: horin 1.2s forwards;
 }
 
 @keyframes horin {
     0%{
-        background-color: #1b1b1b;
         margin: 0 -20px 300px -20px;
     }
     100%{
-        background-color: #000000ea;
         margin: 20px;
-    }
+    } 
 }
 
 .card > h2{
@@ -40,16 +39,18 @@
     font-size: 20px;
     font-weight: 300;
     text-align: right;
-    color: #FDB849;
+    color: #2D6A4F;
 }
 .cardSubTitle{
     display: flex;
     justify-content: space-between;
-    border-bottom: 1px Solid hotpink;
+    border-bottom: 1px Solid #fdb849;
 }
 
 .cardSubTitle > h4{
     margin: 10px 0;
+    font-weight: 300;
+    color: #0D3024;
 }
 
 .cardInfo{

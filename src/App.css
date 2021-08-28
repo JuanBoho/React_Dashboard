@@ -1,7 +1,7 @@
 .App {
   text-align: center;
   display: block;
-  background-color: #3a3a3a;
+  background-color: #e5e5e5;
 }
 
 .DashDisplay{
@@ -19,7 +19,7 @@
 .HourDateBanner{
   padding: 30px 30px 10px 0;
   text-align: right;
-  color: #FDB849;
+  color: #2D6A4F;
 }
 
 .HourDateBanner> h2{

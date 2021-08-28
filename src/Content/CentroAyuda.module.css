@@ -1,5 +1,5 @@
 .Container{
-    background-color: #3a3a3a;
+    background-color: #e5e5e5;
     margin: 20px 20px 0 20px;
 }
 
@@ -17,7 +17,7 @@
 .HelpTitle{
     font-weight: 300;
     text-align: left;
-    color: #FDB849;
+    color: #2D6A4F;
     text-align: center;
     animation: helpintit 1.2s forwards;
 }
@@ -41,21 +41,22 @@
 
 .HOption{
     margin: 20px;
-    background-color: #000;
-    box-shadow: rgb(0, 0, 0) 0px 8px 24px;
+    background: rgb(229,229,229);
+    background: radial-gradient(circle, rgba(229,229,229,1) 0%, rgba(245,245,245,1) 100%);
+    box-shadow: #0d30242c 0px 4px 12px;
     border-radius: 8px;
     text-align: left;
-    color: #FDB849;
+    color: #1D4937;
     animation: helpin .8s forwards;
 }
 
 @keyframes helpin {
     0%{
-        background-color:#1b1b1b;
+        background:#fff;
         margin-bottom: 40px;
     }
     100%{
-        background-color: #000;
+        background: #e5e5e5;
         margin-bottom: 20px;
     }
     
@@ -76,8 +77,9 @@
 }
 
 .HOption:hover{
-    border-left: 4px solid hotpink;
-    color: hotpink;
+    background-color: rgb(42, 202, 114);
+    border-left: 4px solid #fdb849;
+    color: #0D3024;
     border-radius: 18px 0  0 0;
     cursor: pointer;
 }
@@ -86,7 +88,8 @@
     margin: 4px;
     text-align: left;
     font-size: 24px;
-    border-bottom: 1px solid hotpink;
+    font-weight: 500;
+    border-bottom: 1px solid #fdb849;
 }
 
 .HelpBottom{
@@ -98,7 +101,7 @@
 }
 
 .TutorialContainer> div>p{
-    color: #fff;
+    color: #1D4937;
 }
 
 .ContactoItems{
@@ -106,10 +109,11 @@
     justify-content: space-between;
     margin: 0 20px;
     padding: 0 20px;
-    background-color: #000;
-    box-shadow: rgb(0, 0, 0) 0px 8px 24px;
+    background: rgb(229,229,229);
+    background: radial-gradient(circle, rgba(229,229,229,1) 0%, rgba(245,245,245,1) 100%);
+    box-shadow: #0d30242c 0px 4px 12px;
     border-radius: 8px;
-    color: #FDB849;
+    color: #1D4937;
 }
 
 @media (max-width:1200px) {

@@ -78,7 +78,7 @@ const dataRend = [
     fullMark: 100,
   },
   {
-    item: 'Operación',
+    item: 'Stock',
     esperado: 95,
     anterior: 77.4,
     actual: 90.4,
@@ -92,7 +92,7 @@ const dataRend = [
     fullMark: 100,
   },
   {
-    item: 'Limpieza',
+    item: 'Envíos',
     esperado: 98,
     anterior: 97.1,
     actual: 94.2,
@@ -112,17 +112,17 @@ const ProductosBarChart = () =>{
           bottom: 5,
         }}
       >
-        <XAxis dataKey="name" />
+        <XAxis dataKey="name" contentStyle={{color: '#0D3024'}}/>
         <YAxis />
         <Tooltip contentStyle={{
-                    backgroundColor:'#000000ea',
+                    backgroundColor:'#e5e5e5',
                     border:'none'}}
-                    labelStyle={{color: '#FFF'
+                    labelStyle={{color: '#0D3024'
                 }}/>
         <Legend verticalAlign="top" />
-        <Bar dataKey="unidades" stackId="a" fill="hotpink" />
-        <Bar dataKey="Hs" stackId="a" fill="#fdb849" />
-        <Line dataKey="prod" stroke="red" strokeWidth={3}/>
+        <Bar dataKey="unidades" stackId="a" fill="#52B788" />
+        <Bar dataKey="Hs" stackId="a" fill="#95D5B2" />
+        <Line dataKey="prod" stroke="#fdb849" strokeWidth={3}/>
       </ComposedChart>
     </ResponsiveContainer>
   );
@@ -133,11 +133,11 @@ const RendimientoRadialChart = () =>{
     <ResponsiveContainer width="98%" height={400}>
         <RadarChart cx="50%" cy="50%" outerRadius="80%" data={dataRend}>
           <PolarGrid />
-          <PolarAngleAxis dataKey="item" stroke="#fff"/>
+          <PolarAngleAxis dataKey="item" stroke="#0D3024"/>
           <PolarRadiusAxis angle={30} domain={[0, 100]} />
-          <Radar name="Operación Óptima" dataKey="esperado" stroke="#8884d8" fill="#8884d8" fillOpacity={0.6} />
-          <Radar name="Mes Anterior" dataKey="anterior" stroke="#ea6f6f" fill="#ea6f6f" fillOpacity={0.6} />
-          <Radar name="Operación Actual" dataKey="actual" stroke="#82ca9d" fill="#82ca9d" fillOpacity={0.6} />
+          <Radar name="Operación Óptima" dataKey="esperado" stroke="#fdb849" fill="#fdb849" fillOpacity={0.6} />
+          <Radar name="Mes Anterior" dataKey="anterior" stroke="#af52b8" fill="#af52b8" fillOpacity={0.6} />
+          <Radar name="Operación Actual" dataKey="actual" stroke="#52B788" fill="#52B788" fillOpacity={0.6} />
           
           <Legend />
         </RadarChart>
@@ -342,27 +342,18 @@ class Informes extends Component{
                                 value={15.8}
                                 initialValue ={0.0}
                                 duration = {1100}
-                                style={{
-                                    fontSize: 20
-                                }}
                                 formatValue={n => n.toFixed(1)}
                             /></p>
                   <p><AnimatedNumber
                                 value={316}
                                 initialValue ={0.0}
                                 duration = {1100}
-                                style={{
-                                    fontSize: 20
-                                }}
                                 formatValue={n => n.toFixed(0)}
                             /></p>
                   <p><AnimatedNumber
                                 value={20}
                                 initialValue ={0.0}
                                 duration = {1100}
-                                style={{
-                                    fontSize: 20
-                                }}
                                 formatValue={n => n.toFixed(1)}
                             /></p>
                 </div>
@@ -467,47 +458,65 @@ class Informes extends Component{
               <p>Volver</p>
             </div>
          </div>
-         
+          
         <div className={classes.InformeCard}>
           <h2>Calidad y Rendimiento</h2>
-          <div>
+          
+          <div className={classes.RendContent} > 
+
             {RendimientoRadialChart()}
             <div className={classes.GraphCardInfo}>
               
               <div>
-                <p>Productividad</p>
-                <p>Tickets</p>
-                <p>Hs Colaboradores</p>
+                <p>Exp. Cliente</p>
+                <p>Venta</p>
+                <p>Stock</p>
+                <p>Calidad</p>
+                <p>Envíos</p>
               </div>
 
-              <div>
+              <div className={classes.RendVals}>
                 <p>
-                      <AnimatedNumber
-                        value={15.8}
-                        initialValue ={0.0}
-                        duration = {1100}
-                        style={{fontSize: 20}}
-                        formatValue={n => n.toFixed(1)}
-                      />
-                    </p>
+                  <AnimatedNumber
+                    value={75}
+                    initialValue ={0.0}
+                    duration = {1100}
+                    formatValue={n => n.toFixed(1)}
+                  /> {"%"}
+                </p>
                 <p>
-                      <AnimatedNumber
-                        value={316}
-                        initialValue ={0.0}
-                        duration = {1100}
-                        style={{fontSize: 20}}
-                        formatValue={n => n.toFixed(0)}
-                      />
-                    </p>
+                  <AnimatedNumber
+                    value={63.4}
+                    initialValue ={0.0}
+                    duration = {1100}
+                    formatValue={n => n.toFixed(1)}
+                  /> {"%"}
+                </p>
                 <p>
-                      <AnimatedNumber
-                        value={20}
-                        initialValue ={0.0}
-                        duration = {1100}
-                        style={{fontSize: 20}}
-                        formatValue={n => n.toFixed(1)}
-                      />
-                    </p>
+                  <AnimatedNumber
+                    value={90.4}
+                    initialValue ={0.0}
+                    duration = {1100}
+                    formatValue={n => n.toFixed(1)}
+                  /> {"%"}
+                </p>
+                <p>
+                  <AnimatedNumber
+                    value={89.3}
+                    initialValue ={0.0}
+                    duration = {1100}
+                    formatValue={n => n.toFixed(1)}
+                  /> {"%"}
+                </p>
+                <p>
+                  <AnimatedNumber
+                    value={94.2}
+                    initialValue ={0.0}
+                    duration = {1100}
+                    formatValue={n => n.toFixed(1)}
+                  /> {"%"}
+                </p>
+                
               </div>                
             
             </div>

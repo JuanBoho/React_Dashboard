@@ -37,7 +37,7 @@ const data = [
   ];
 const data02 =[{name: 'Positivas', value: 652} , {name: 'Negativas', value: 54}];
 
-const CustomExpColors = ["hotpink","rgba(255, 105, 180, 0.529)"];
+const CustomExpColors = ["#FDB849","#2d6a4f"];
 const CusExpPercentages= (data)=>{
     var values =[];
     let percentages = []
@@ -74,7 +74,7 @@ const IngresosLineChart = ()=>{
                 dataKey="name" 
                 axisLine={false} tickLine={false} 
                 padding={{ left: 15 }}
-                style={{fill:'#FFF'
+                style={{fill:'#2D6A4F'
                 }}
             />
             
@@ -83,22 +83,23 @@ const IngresosLineChart = ()=>{
                 axisLine={false} 
                 tickLine={false}
                 ticks={[0,10000,20000,30000,40000]}
-                style={{fill:'#FFF'
+                style={{fill:'#2D6A4F'
                 }}
             />
 
             <Tooltip 
                 contentStyle={{
-                    backgroundColor:'#000000ea',
+                    backgroundColor:'#2D6A4Fd0',
                     border:'none'}}
-                    labelStyle={{color: '#FFF'
+                    labelStyle={{color: '#FDB849'
                 }}
             />
             
             <Line 
                 type="monotone" 
                 dataKey="ingresos" 
-                stroke="hotpink" 
+                stroke="#FDB849" 
+                strokeWidth={3}
                 dot={false}
                 />
 
@@ -116,6 +117,13 @@ const CustomExpPieChart = ()=>{
                     ))
                 }
             </Pie>
+            <Tooltip 
+                contentStyle={{
+                    backgroundColor:'#2D6A4Fd0',
+                    border:'none'}}
+                    labelStyle={{color: '#2D6A4Fd0'
+                }}
+            />
         </PieChart>
       </ResponsiveContainer>
     );

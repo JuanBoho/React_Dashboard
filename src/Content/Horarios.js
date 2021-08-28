@@ -7,7 +7,7 @@ import Switch from "react-switch";
 class SwitchExample extends Component {
   constructor() {
     super();
-    this.state = { checked: false };
+    this.state = { checked: true };
     this.handleChange = this.handleChange.bind(this);
   }
 
@@ -19,14 +19,12 @@ class SwitchExample extends Component {
     return (
       <label>
         <Switch 
-        offHandleColor = "#FDB849"
-        onHandleColor = "#000"
+        offHandleColor = "#2d6a4f"
+        onHandleColor = "#092018"
         activeBoxShadow ="0 0 2px 3px #333"
         height = {20}
-        onColor = "#FDB849"
-        offColor = "#333"
-        checkedIcon = {false}
-        uncheckedIcon = {false}
+        onColor = "#2d6a4f"
+        offColor = "#092018"
         onChange = {this.handleChange} 
         checked = {this.state.checked}/>
       </label>

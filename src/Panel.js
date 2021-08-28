@@ -52,7 +52,7 @@ const Panel = (props)=>{
             <aside>
                 <div className={classes.Logo}>
                     <i class="fas fa-mortar-pestle"></i>
-                    <p>MyCompany</p>
+                    <p>MiComercio</p>
                 </div>
 
                 <div className={classes.PanelNav}>
